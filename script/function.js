@@ -268,7 +268,7 @@ function calcIncrementyMult(i = game.incrementy) {
     .times(1.2)
     .pow(EN(1.05).pow(game.iups[0]));
   if (game.incrementyverse == 0) {
-    k = k.min(2 ** 1000).toNumber();
+    k = k.min(2 ** 399).toNumber();
   }
   return k;
 }
