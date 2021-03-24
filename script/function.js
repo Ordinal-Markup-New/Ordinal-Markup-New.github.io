@@ -473,7 +473,7 @@ function inChal(x) {
   if (x == 9 && game.chal9 == 1) return true;
   if (x < 6.5) {if (inChal(7)) return true;}
   if  (game.challenge2.includes(x)) return true;
-  return false 
+  return false;
 } //Time for some hell lol at least it isn't as bad because both of us are doing it at the same time 
 
 // so i do all of calc.js and all game.chal8 and you do the rest
