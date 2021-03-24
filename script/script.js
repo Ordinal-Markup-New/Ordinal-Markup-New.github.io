@@ -1068,6 +1068,9 @@ function render() {
   get("ig53").textContent =
     "Ignore the 53 Booster Upgrade unless in odd numbered challenges: " +
     (game.qolSM.ig53 == 1 ? "ON" : "OFF");
+  get("ig74").textContent =
+    "Ignore the 74 Booster Upgrade unless in challenge 6: " +
+    (game.qolSM.ig74 == 1 ? "ON" : "OFF");
   get("igc8").textContent =
     "Ignore in Challenge 8: " + (game.qolSM.igc8 == 1 ? "ON" : "OFF");
   get("acc").textContent =
