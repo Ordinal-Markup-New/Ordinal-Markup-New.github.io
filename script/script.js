@@ -108,19 +108,6 @@ const aupCost = [
   2 ** 256,
   2 ** 512
 ];
-let AF = 0;
-const d = new Date();
-if (
-  d.getMonth() === 3 &&
-  d.getDate() === 1 &&
-  !(d.getFullYear() === Number(localStorage.ordinalMarkupAF))
-) {
-  AF = 1;
-  console.log("April Fools!");
-  localStorage.setItem("ordinalMarkupAF", d.getFullYear().toString());
-} else {
-  AF = 0;
-}
 const ach = document.querySelectorAll("#achievementTable td")
 reset();
 get("music").loop = true;
@@ -1094,7 +1081,7 @@ function render() {
   get("singText").textContent = "Singularity Level: " + getSingLevel();
   get("singMaterial").innerHTML =
     "You have " +
-    beautify(Math.max(0,game.darkManifolds - getDMSacrafice())) +
+    beautify(Math.max(0,game.darkManifolds - getDMSacrifice())) +
     " Dark Manifolds, " +
     (game.manifolds - game.sing.m) +
     " Manifolds, and " +
