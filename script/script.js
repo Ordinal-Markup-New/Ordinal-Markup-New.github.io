@@ -2132,7 +2132,7 @@ function distributeCard() {
 function getSingularity(x) {
   if (
     x == 0 &&
-    game.darkManifolds - getDMSacrafice() >= 1e6 * (game.sfBought.includes(23)?4:5) ** game.sing.dm
+    game.darkManifolds - getDMSacrifice() >= 1e6 * (game.sfBought.includes(23)?4:5) ** game.sing.dm
   ) {
     game.sing.dm++;
   } else if (x == 1 && game.manifolds >= game.sing.m + 1) {
