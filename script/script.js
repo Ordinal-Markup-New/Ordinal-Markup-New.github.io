@@ -1173,7 +1173,7 @@ They are based on your Singularity level.`
   get("oc6Effect").innerHTML=Math.max(1,getOCComp(6)**0.5).toFixed(6)
   get("enterIncrementyverse").style.display=game.sfEver.includes(41)?"inline":"none"
   get("boostersFromMilestones").style.display=(game.collapseUnlock===1?"block":"none")
-  get("boostersFromMilestones").textContent=`(+${Math.round(Math.max(getSumOC(),1)*(calcSlugMile() + getBaseless()))} from milestones)`
+  get("boostersFromMilestones").textContent=`(+${Math.round(Math.max(getSumOC()+1,1)*(calcSlugMile() + getBaseless()))} from milestones)`
   get("bestIncrementy").textContent=beautify(game.bestIncrementy)
   get("ocConfEnter").textContent=`Enter Omega Challenge Confirmation: ${game.ocConf.enter==1?"ON":"OFF"}`
   get("ocConfExit").textContent=`Exit Omega Challenge Confirmation: ${game.ocConf.exit==1?"ON":"OFF"}`
