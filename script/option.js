@@ -25,6 +25,11 @@ function updateOptions() {
     displayOrd(10 ** 270 * 4) +
     ": " +
     game.maxOrdLength.more;
+  get("changeOrdLengthMoreMore").innerHTML =
+    "Maximum Ordinal Length above " +
+    displayOrd(BHO) +
+    ": " +
+    game.maxOrdLength.moreMore;
   get("changeOrdNotation").textContent =
     "Current Ordinal Notation: " +
     ["Madore's", "Buchholz's", "Convenient"][game.buchholz];
