@@ -243,7 +243,7 @@ function loop(unadjusted, off = 0) {
     confirm("You failed Challenge 8 because you had booster upgrades on you!");
   if ((game.chal8 === 1) && calcRefund() > 0 && game.omegaChallenge != 1) refund(); // no touch this, softlocks
   game.boosters =
-    ((game.factorBoosts * (game.factorBoosts + 1)) / 2 + Math.round(Math.max(getSumOC(),1)*(calcSlugMile() + getBaseless()))) -
+    ((game.factorBoosts * (game.factorBoosts + 1)) / 2 + Math.round(Math.max(getSumOC() + 1,1)*(calcSlugMile() + getBaseless()))) -
     calcRefund();
   game.boosters=Math.round(game.boosters)
   if (game.boosters < -0.5) refund()
@@ -824,6 +824,10 @@ function render() {
           i + 1 != 10 ||
           inChal(4)||inChal(6)||inChal(7)
         ) &&
+        (game.qolSM.ig53 == 0 ||
+          i + 1 != 13 ||
+          inChal(1) || inChal(3) || inChal(5) || inChal(7) || inChal(9)
+        ) &&
         (game.qolSM.igc8 == 0 || !inChal(8))
         ? 0
         : 1
@@ -953,7 +957,7 @@ function render() {
     beautifypower(Math.log10(game.sfBought.includes(31)?2:3) * (1 + game.darkManifolds)) +
     " Decrementy";
   get("darkManifoldAmount").textContent =
-    beautify(game.darkManifolds) + (game.sing.dm===0||(game.sfBought.includes(11))?"":"-" + beautify(getDMSacrafice()))
+    beautify(game.darkManifolds) + (game.sing.dm===0||(game.sfBought.includes(11))?"":"-" + beautify(getDMSacrifice()))
   get("darkUpButton").style.display = game.aups.includes(3) ? "inline" : "none";
   get("darkManifoldBoost").textContent = getDarkManifoldEffect().toFixed(3);
   get("darkManifoldMaxMode").textContent =
@@ -1061,6 +1065,9 @@ function render() {
   get("ig73").textContent =
     "Ignore the 73 Booster Upgrade unless in challenge 4, 6, or 7: " +
     (game.qolSM.ig73 == 1 ? "ON" : "OFF");
+  get("ig53").textContent =
+    "Ignore the 53 Booster Upgrade unless in odd numbered challenges: " +
+    (game.qolSM.ig53 == 1 ? "ON" : "OFF");
   get("igc8").textContent =
     "Ignore in Challenge 8: " + (game.qolSM.igc8 == 1 ? "ON" : "OFF");
   get("acc").textContent =
