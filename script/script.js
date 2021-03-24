@@ -822,11 +822,15 @@ function render() {
         game.qolSM.abu == 1 &&
         (game.qolSM.ig73 == 0 ||
           i + 1 != 10 ||
-          inChal(4)||inChal(6)||inChal(7)
+          inChal(4) || inChal(6) || inChal(7)
         ) &&
         (game.qolSM.ig53 == 0 ||
           i + 1 != 13 ||
           inChal(1) || inChal(3) || inChal(5) || inChal(7) || inChal(9)
+        ) &&
+	(game.qolSM.ig74 == 0 ||
+          i + 1 != 14 ||
+          inChal(6)
         ) &&
         (game.qolSM.igc8 == 0 || !inChal(8))
         ? 0
