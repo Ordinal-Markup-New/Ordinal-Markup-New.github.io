@@ -488,7 +488,7 @@ function inAnyChal() {
 }
 
 function getOCComp(x) {
-  return game.ocBestIncrementy[x - 1].log10().div(EN(ocGoals[x - 1]).log10()).toNumber();
+  return game.ocBestIncrementy[x - 1].add(1).log10().div(EN(ocGoals[x - 1]).log10()).toNumber();
 }
 
 //EN.js DONE
