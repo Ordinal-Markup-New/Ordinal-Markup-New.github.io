@@ -72,7 +72,7 @@ function reset() {
   mostCardOnce: EN(0),
   flashIncrementy: 1,
   bConf: { ref: 1, refFB: 0, chal: 0, chalFB: 0 },
-  qolSM: { abu: 1, ig73: 1, ig53: 1, igc8: 1, acc: 1, nc8: 0, c8: 0, ca: 0, st: 0, ttnc: 0 },
+  qolSM: { abu: 1, ig73: 1, ig53: 1, ig74: 1, igc8: 1, acc: 1, nc8: 0, c8: 0, ca: 0, st: 0, ttnc: 0 },
   maxCard: EN(0),
   hotkeysOn: 1,
   sing: { dm: 0, m: 0, nw: 0 },
